@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practicing more events</title>
+  </head>
+  <body>
+    <h1>Explore More events</h1>
+    <button id="myText">Click me to change the text color.</button>
+    <br />
+    <input type="text" id="text-field" />
+    <script>
+      document
+        .getElementById("text-field")
+        .addEventListener("keydown", function () {
+          console.log("Keydown event triggered");
+        });
+      document
+        .getElementById("text-field")
+        .addEventListener("keyup", function () {
+          console.log("Keyup event triggered");
+        });
+      document
+        .getElementById("text-field")
+        .addEventListener("keypress", function () {
+          console.log("Keypress event triggered");
+        });
+      document
+        .getElementById("myText")
+        .addEventListener("mousemove", function () {
+          console.log("Event triggerd");
+        });
+
+      //   // Event listener for click event
+      //   text.addEventListener("click", function () {
+      //     // Change text color to random color
+      //     this.style.color = `rgb(${Math.floor(
+      //       Math.random() * 256 //ai genarated codes for random color
+      //     )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
+      //       Math.random() * 256
+      //     )})`;
+      //   });
+    </script>
+  </body>
+</html>

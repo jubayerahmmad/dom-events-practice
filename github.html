@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DELETE</title>
+  </head>
+  <body>
+    <h1 class="secret-info">My Secret Info</h1>
+    <p>
+      This is a secret message. Only authorized users should be able to see
+      this.
+    </p>
+    <br />
+    <input
+      type="text"
+      name=""
+      id="input-field"
+      placeholder="please type delete"
+    />
+    <button id="btn-dlt" disabled>Delete</button>
+    <script>
+      document
+        .getElementById("input-field")
+        .addEventListener("keyup", function (event) {
+          const text = event.target.value;
+          const deleteBtn = document.getElementById("btn-dlt");
+          if (text === "delete") {
+            deleteBtn.removeAttribute("disabled");
+            // deleteBtn.disabled = false;
+          } else {
+            deleteBtn.setAttribute("disabled", true);
+          }
+        });
+    </script>
+  </body>
+</html>
