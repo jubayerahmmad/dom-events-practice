@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+  <body>
+    <h1>DOM EVENTS</h1>
+    <button title="Hillow" onclick="console.log('hallo bai')">Click Me</button>
+    <br />
+    <button title="Change color" onclick="changeColor()">
+      Change Color to Blue
+    </button>
+    <br />
+    <button title="Change color" id="make-orange">
+      Change Color to Orange
+    </button>
+    <br />
+    <button id="make-purple">Change Color to Purple</button>
+    <br />
+    <button id="make-green">Change Color to Green</button>
+    <br />
+
+    <!-- handle events -->
+    <h2 id="handle-events">Default Text</h2>
+    <h2 id="update-text">Default Input Text</h2>
+    <input id="input-field" type="text" />
+    <button id="btn-update">Update</button>
+    <br />
+
+    <button onclick="handleEvent()">Click to change the text above</button>
+    <button id="event-listener">Click to change the text above</button>
+
+    <!-- Adding comments/text to a div -->
+    <h1>Add your Comments</h1>
+    <div id="comments-div">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorem
+        consequatur porro quaerat nam autem ab labore incidunt. Nesciunt atque
+        sunt nobis quas asperiores, tempora voluptate modi eligendi, placeat
+        eaque, fugit soluta pariatur obcaecati doloremque explicabo? Recusandae
+        dolore nihil nesciunt.
+      </p>
+      <p>
+        Culpa sit voluptas minus voluptatum beatae consequatur quaerat quis
+        blanditiis esse corporis reiciendis, aperiam enim illum praesentium
+        totam velit, dolore architecto repudiandae maiores molestias sunt itaque
+        odio? Cum temporibus quae ad illum fuga nobis provident officiis
+        explicabo repellat! Pariatur, ducimus!
+      </p>
+      <p>
+        Enim tempore ea eveniet optio obcaecati fugit, nesciunt at omnis eum
+        quas error nihil autem voluptate, quisquam perspiciatis facere? Illo,
+        autem asperiores nisi qui quidem voluptatum saepe repellendus inventore
+        molestiae ad, eaque illum, pariatur repudiandae quo perferendis? Neque,
+        dolorem sapiente!
+      </p>
+    </div>
+    <div>
+      <textarea name="" id="comments-input" cols="60" rows="4"></textarea>
+      <br />
+      <button id="btn-post">Add Comment</button>
+    </div>
+
+    <script src="./JS/events.js"></script>
+  </body>
+</html>
