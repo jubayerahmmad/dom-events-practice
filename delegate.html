@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVENT DELEGATION</title>
+  </head>
+  <body>
+    <!--* Event delegation is a technique where you attach an event listener to a parent element instead of directly to each child element. When the event occurs on a child element, it bubbles up to the parent, triggering the event listener. This can be more efficient than attaching listeners to every child, especially when there are many elements. -->
+    <h1>Explore event Delegation</h1>
+    <section>
+      <ul id="list-container">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+        <li class="item">Item 4</li>
+        <li class="item">Item 5</li>
+        <li class="item">Item 6</li>
+      </ul>
+      <button id="btn-add-item">Add New Item</button>
+    </section>
+
+    <script>
+      //   const items = document.getElementsByClassName("item");
+      //   for (const item of items) {
+      //     item.addEventListener("click", function (event) {
+      //       event.target.parentNode.removeChild(event.target);
+      //     });
+      //   }
+      const listContainer = document.getElementById("list-container");
+      listContainer.addEventListener("click", function (event) {
+        event.target.parentNode.removeChild(event.target);
+        // if (event.target.classList.contains("item")) {
+        //   event.target.parentNode.removeChild(event.target);
+        // }
+      });
+      document
+        .getElementById("btn-add-item")
+        .addEventListener("click", function () {
+          const listContainer = document.getElementById("list-container");
+          const li = document.createElement("li");
+          li.innerText = "New Item added";
+          li.classList.add("item");
+          listContainer.appendChild(li);
+        });
+    </script>
+  </body>
+</html>
