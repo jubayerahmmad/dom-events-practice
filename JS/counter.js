@@ -13,7 +13,7 @@
 // }
 
 //!addEventListener
-let count = document.getElementById("count");
+const count = document.getElementById("count");
 const counter = document.getElementById("counter");
 
 const increaseBtn = document.getElementsByClassName("increase-btn")[0];
